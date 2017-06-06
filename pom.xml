@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- 所使用的object model版本，为了确保稳定的使用，这个元素是强制性的。除非maven开发者升级模板，否则不需要修改 -->
+	<modelVersion>4.0.0</modelVersion>
+	<!-- 表示项目的展现名，在maven生成的文档中使用 -->
+	<name>springboot :: Learning</name>
+	<!-- 表示项目的描述，在maven生成的文档中使用 -->
+	<description>学习SringBoot的练习Project</description>
+	<!-- 是项目创建团体或组织的唯一标志符，通常是域名倒写，如groupId  org.apache.maven.plugins就是为所有maven插件预留的 -->
+	<groupId>com.dayistudio</groupId>
+	<!--是项目artifact唯一的基地址名(坐标)-->
+	<artifactId>springboot-learning</artifactId>
+	<!--artifact的版本，通常能看见为类似0.0.1-SNAPSHOT，其中SNAPSHOT表示项目开发中，为开发版本, RELEASE表示为已经发布的版本-->
+	<version>0.0.1-SNAPSHOT</version>
+	<!-- artifact打包的方式，可以为：pom , jar , maven-plugin , ejb , war , ear , rar , par。默认为jar。这个不仅表示项目最终产生何种后缀的文件，也表示build过程使用什么样的lifecycle。 -->
+	<packaging>pom</packaging>
+	<!-- groupId:artifactId:version唯一确定了一个artifact -->
+
+	<modules>
+		<!-- 基础 – 入门篇 -->
+		
+		<!-- Spring Boot 之 HelloWorld 详解 -->
+		<module>springboot-helloworld</module>
+		<!-- Spring Boot 之配置文件详解 -->
+		<module>springboot-properties</module>
+		<!-- Spring Boot 之配置文件详解 -->
+		<module>springboot-multimodule</module>
+
+		<!-- 基础 - Web 业务开发篇 -->
+		<!-- Spring Boot 实现 Restful 服务，基于 HTTP / JSON 传输 -->
+		<module>springboot-restful</module>
+		<!-- SpringBoot 实现MvcWeb页面 -->
+		<module>springboot-mvc</module>
+		<!-- Spring Boot 集成 FreeMarker -->
+		<module>springboot-freemarker</module>
+		<!-- Spring Boot HTTP over JSON 的错误码异常处理 -->
+		<module>springboot-validation-over-json</module>
+		
+		<!-- 基础 - Unit测试篇 -->
+
+		<!-- 基础 – 数据存储篇 -->
+		<!-- Spring Boot jdbc-->
+		<module>springboot-jdbc</module>
+		<!-- Spring Boot 整合 JPA 的完整 Web 案例 -->
+		<module>springboot-jpa</module>
+		<!-- Spring Boot 整合 Mybatis 的完整 Web 案例 -->
+		<module>springboot-mybatis</module>
+		<!-- Spring Boot 整合 Mybatis Annotation 注解案例 -->
+		<module>springboot-mybatis-annotation</module>
+		<!-- Spring Boot 整合 Mybatis 实现 Druid 多数据源配置 -->
+		<module>springboot-mybatis-mutil-datasource</module>
+		<!-- Spring Boot 整合Druid连接池 -->
+		<module>springboot-druid</module>
+
+		<!-- 基础 – 数据缓存篇 -->
+		<!-- Spring Boot 整合 Redis 实现缓存 -->
+		<module>springboot-mybatis-redis</module>
+		<!-- Spring Boot 整合 Redis 实现缓存 -->
+		<module>springboot-mybatis-memocached</module>
+
+		<!-- 其他篇 -->
+		<!-- Spring Boot 整合 Dubbo/ZooKeeper 详解 SOA 案例 -->
+		<module>springboot-dubbo-server</module>
+		<module>springboot-dubbo-client</module>
+		<!-- Spring Boot 整合 Elasticsearch -->
+		<module>springboot-elasticsearch</module>
+
+	</modules>
+
+</project>
