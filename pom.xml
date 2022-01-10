@@ -4,7 +4,7 @@
     <!-- 所使用的object model版本，为了确保稳定的使用，这个元素是强制性的。除非maven开发者升级模板，否则不需要修改 -->
     <modelVersion>4.0.0</modelVersion>
     <!-- 表示项目的展现名，在maven生成的文档中使用 -->
-    <name>springboot :: Learning</name>
+    <name>SpringBoot Learning</name>
     <!-- 表示项目的描述，在maven生成的文档中使用 -->
     <description>学习SpringBoot的练习Project</description>
     <!-- artifact打包的方式，可以为：pom , jar , maven-plugin , ejb , war , ear , rar , par。默认为jar。这个不仅表示项目最终产生何种后缀的文件，也表示build过程使用什么样的lifecycle。 -->
@@ -60,8 +60,8 @@
 <!--		&lt;!&ndash; 基础 - Unit测试篇 &ndash;&gt;-->
 <!--		<module>springboot-test</module>-->
 
-<!--		&lt;!&ndash; 基础 - 缓存篇 &ndash;&gt;-->
-<!--		<module>springboot-redis</module>-->
+		<!-- 基础 - 缓存篇 -->
+		<module>springboot-redis</module>
 
 <!--		&lt;!&ndash; 基础 – 数据存储篇 &ndash;&gt;-->
 <!--		&lt;!&ndash; Spring Boot jdbc&ndash;&gt;-->
@@ -104,6 +104,14 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
                 <version>${hutool.version}</version>
@@ -116,5 +124,25 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
