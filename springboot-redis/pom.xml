@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>springboot-redis</artifactId>
-    <name>springboot-redis-integration</name>
+    <name>springboot-redis</name>
     <description>springboot and redis integration</description>
 
     <parent>
@@ -54,7 +54,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.ewu.study.SpringbootRedisDemoApplication</mainClass>
+                    <mainClass>com.easonwy.study.SpringbootRedisDemoApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>

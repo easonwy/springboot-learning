@@ -1,4 +1,4 @@
-package com.ewu.study.config;
+package com.easonwy.study.config;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;

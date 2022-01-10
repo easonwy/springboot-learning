@@ -1,4 +1,4 @@
-package com.ewu.study.domain;
+package com.easonwy.study.domain;
 
 import java.io.Serializable;
 

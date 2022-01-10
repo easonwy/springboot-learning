@@ -1,4 +1,4 @@
-package com.ewu.study.util;
+package com.easonwy.study.util;
 
 /**
  * @author eason.wu

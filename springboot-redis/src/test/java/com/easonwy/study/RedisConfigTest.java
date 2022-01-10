@@ -1,8 +1,8 @@
-package com.ewu.study;
+package com.easonwy.study;
 
-import com.ewu.study.domain.UserVo;
-import com.ewu.study.service.RedisService;
-import com.ewu.study.util.RedisKeyUtil;
+import com.easonwy.study.domain.UserVo;
+import com.easonwy.study.service.RedisService;
+import com.easonwy.study.util.RedisKeyUtil;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
