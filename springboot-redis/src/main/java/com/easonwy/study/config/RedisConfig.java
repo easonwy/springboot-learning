@@ -49,10 +49,13 @@ public class RedisConfig extends CachingConfigurerSupport {
         };
     }
 
-    @Bean // 关联redis到注解
-    CacheManager cacheManager(RedisConnectionFactory redisConnectionFactory) {
+    /**
+     * 关联redis到注解
+     */
+    @Bean
+    CacheManager cacheManager(RedisConnectionFactory factory) {
 
-        RedisCacheWriter redisCacheWriter = RedisCacheWriter.nonLockingRedisCacheWriter(redisConnectionFactory);
+        RedisCacheWriter redisCacheWriter = RedisCacheWriter.nonLockingRedisCacheWriter(factory);
 
         // 默认配置，过期时间指定是30分钟
         RedisCacheConfiguration defaultCacheConfig = RedisCacheConfiguration.defaultCacheConfig();
@@ -69,9 +72,7 @@ public class RedisConfig extends CachingConfigurerSupport {
     }
 
     /**
-     * retemplate相关配置
-     * @param factory
-     * @return
+     * Redis Template 相关配置
      */
     @Bean
     public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory factory) {
