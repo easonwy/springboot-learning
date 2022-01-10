@@ -98,8 +98,8 @@ public class RedisConfigTest {
         userVo.setAddress("北京");
         userVo.setName("jantent");
         userVo.setAge(23);
-//        listOperations.leftPush("list:user",userVo);
-//        System.out.println(listOperations.leftPop("list:user"));
+        listOperations.leftPush("list:user",userVo);
+        System.out.println(listOperations.leftPop("list:user"));
         // pop之后 值会消失
         System.out.println(listOperations.leftPop("list:user"));
     }
