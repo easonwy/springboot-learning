@@ -32,6 +32,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.3.5.RELEASE</spring-boot.version>
+        <hutool.version>5.7.17</hutool.version>
+        <lombok.version>1.18.22</lombok.version>
     </properties>
 
 
@@ -97,36 +99,20 @@
 <!--		<module>springboot-vue</module>-->
     </modules>
 
-
     <!-- 版本说明：这里统一管理依赖的版本号 -->
+    <!-- 该标签只用来控制版本，不能将依赖引入 -->
     <dependencyManagement>
         <dependencies>
-
             <dependency>
-                <groupId>com.hehe</groupId>
-                <artifactId>mm-web</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>com.hehe</groupId>
-                <artifactId>mm-service</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>com.hehe</groupId>
-                <artifactId>mm-repo</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>com.hehe</groupId>
-                <artifactId>mm-entity</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>5.1.42</version>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
