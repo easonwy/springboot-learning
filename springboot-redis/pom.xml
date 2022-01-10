@@ -54,7 +54,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.easonwy.study.SpringbootRedisDemoApplication</mainClass>
+                    <mainClass>com.easonwy.study.SpringbootRedisApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
